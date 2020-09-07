@@ -1,5 +1,6 @@
 package edu.jsu.mcis;
 
+//Author Tony White
 public class TicTacToe {
     
     public static final int DEFAULT_WIDTH = 3;
