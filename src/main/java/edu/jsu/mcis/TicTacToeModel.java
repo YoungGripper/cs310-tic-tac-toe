@@ -1,7 +1,6 @@
 package edu.jsu.mcis;
 
-//author Tony White
-
+//Author Tony White
 public class TicTacToeModel {
     
     private Mark[][] board; /* Game board */
@@ -114,7 +113,6 @@ public class TicTacToeModel {
         
         /* Return TRUE if the specified location is within the bounds of the board */
         
-        // INSERT YOUR CODE HERE
         return row < width && col < width && row >= 0 && col >= 0;
         
     }
@@ -155,20 +153,14 @@ public class TicTacToeModel {
     }
 	
     private boolean isMarkWin(Mark mark) {
-        
-      /* Check the squares of the board to see if the specified mark is the
-           winner */
-        
-        // INSERT YOUR CODE HERE
-
-      int diagUR = 0; 
+        int diagUR = 0; 
         int diagDR = 0; 
 
         for(int i = 0; i < width; i++){ // for loop for rows
             int rowCount = 0; 
             int colCount = 0; 
 
-            for(int j = 0; j < width; j++){ // loop for the columns 
+            for(int j = 0; j < width; j++){ // loop for the collumns 
                 if(board[i][j].equals(mark)){ 
                     rowCount ++;
                 }
@@ -180,7 +172,7 @@ public class TicTacToeModel {
             if(rowCount == width || colCount == width){ 
                 return true;
             }
-            if(board[i][i].equals(mark)){ 
+            if(board[i][i].equals(mark)){
                 diagDR ++;
             }
             if(board[width-i-1][i].equals(mark)){ 
